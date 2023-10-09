@@ -34,7 +34,3 @@
   transition: all 0.2s ease-in-out;
 }
 
-.hero-leave {
-  transition: all 0.2s ease-in-out;
-  transform: translateX(-5000px);
-}

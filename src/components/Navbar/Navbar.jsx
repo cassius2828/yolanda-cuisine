@@ -2,6 +2,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import "./Navbar.css";
+import { MobileListBtn } from "./MobileListBtn";
 
 const navList = [
   "Homeless Support",
@@ -13,13 +14,15 @@ const navList = [
   "Dedications",
 ];
 
-export const Navbar = ({burger, onToggleMenu}) => {
-  
-
+export const Navbar = ({ burger, onToggleMenu }) => {
   return (
     <div className="navbar">
       <DesktopNav navList={navList} />
-      <MobileNav burger={burger} handleToggleMenu={onToggleMenu} navList={navList} />
+      <MobileNav
+        burger={burger}
+        handleToggleMenu={onToggleMenu}
+        navList={navList}
+      />
     </div>
   );
 };
@@ -45,9 +48,8 @@ export const DesktopNav = ({ navList }) => {
 };
 
 // eslint-disable-next-line react/prop-types
-export const MobileNav = ({navList, burger, handleToggleMenu}) => {
-//   const [burger, setBurger] = useState(false);
-
+export const MobileNav = ({ navList, burger, handleToggleMenu }) => {
+  //   const [burger, setBurger] = useState(false);
 
   return (
     <>
@@ -61,22 +63,46 @@ export const MobileNav = ({navList, burger, handleToggleMenu}) => {
           }
         ></div>
       </div>
-       <div className={burger ? 'slide-menu slide-in' : 'slide-menu'}>
+      <div className={burger ? "slide-menu slide-in" : "slide-menu"}>
         <ul>
           {/*eslint-disable-next-line react/prop-types*/}
           {navList.map((i, index) => {
-            return (
-              <a key={index} href={i.split("").join("").toLowerCase()}>
-                <li id={i.split("").join("").toLowerCase()}>{i}</li>
-              </a>
-            );
+            return <MobileNavListItem key={i} listText={i} />;
           })}
         </ul>
-      </div> 
-     
+      </div>
     </>
   );
 };
+
+export const MobileNavListItem = ({ listText }) => {
+  return (
+    <div className="list-item-container">
+      {" "}
+      <a href="">
+        <li>
+          <MobileListBtn text={listText} />
+        </li>
+      </a>
+    </div>
+  );
+};
+/*
+List Item Design
+- border gradient
+- background whitesmoke
+- 70vw length
+- rounded
+- circlular arrow button on the right
+- dark pink or black for text color
+- animation on arrow hover??
+Twilio menu example
+
+
+
+
+
+*/
 
 /*
 1. Free food + clothing for the homeless

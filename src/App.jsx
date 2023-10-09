@@ -2,14 +2,24 @@ import "./App.css";
 import ErrorBoundary from "./ErrorBoundary";
 import { Navbar } from "./components/Navbar/Navbar";
 import { HeroImg } from "./components/HeroImg/HeroImg";
-import {useState} from "react";
-function App() {
-    const [burger, setBurger] = useState(false);
+// homeless support imports
+import { HomelessSupport } from "./components/HomelessSupport/HomelessSupport";
 
-    const toggleMenu = () => {
-      setBurger((prev) => !prev);
-    
-    };
+import foodGiveaway1 from "./assets/images/charity/homeless-food-distribution.jpg";
+
+import { useState } from "react";
+function App() {
+  const [burger, setBurger] = useState(false);
+  const [selectedID, setSelectedID] = useState(null);
+
+  const flipCard = (id) => {
+    setSelectedID(id !== selectedID ? id : null);
+    console.log("clicked");
+  };
+
+  const toggleMenu = () => {
+    setBurger((prev) => !prev);
+  };
 
   return (
     <div className="App">
@@ -22,6 +32,12 @@ function App() {
       >
         <Navbar burger={burger} onToggleMenu={toggleMenu} />
         <HeroImg burger={burger} setBurger={setBurger} />
+        <HomelessSupport
+          selectedID={selectedID}
+          onFlipCard={flipCard}
+          image={foodGiveaway1}
+          alt="Meal center giveaway in action"
+        />
       </ErrorBoundary>
     </div>
   );
