@@ -2,19 +2,24 @@ import "./App.css";
 import ErrorBoundary from "./ErrorBoundary";
 import { Navbar } from "./components/Navbar/Navbar";
 import { HeroImg } from "./components/HeroImg/HeroImg";
+
 // homeless support imports
 import { HomelessSupport } from "./components/HomelessSupport/HomelessSupport";
 
 import foodGiveaway1 from "./assets/images/charity/homeless-food-distribution.jpg";
 
 import { useState } from "react";
+import {ReadingAndMusic} from "./components/ReadingAndMusic/ReadingAndMusic";
 function App() {
   const [burger, setBurger] = useState(false);
   const [selectedID, setSelectedID] = useState(null);
+  const primaryColor = "#ff166a";
+  const secondaryColor = "#fc74a5";
 
   const flipCard = (id) => {
     setSelectedID(id !== selectedID ? id : null);
-    console.log("clicked");
+    console.log('this is the component id ' + id);
+    console.log("this is the state id " + selectedID);
   };
 
   const toggleMenu = () => {
@@ -33,10 +38,20 @@ function App() {
         <Navbar burger={burger} onToggleMenu={toggleMenu} />
         <HeroImg burger={burger} setBurger={setBurger} />
         <HomelessSupport
+        color='light'
+        primaryColor={primaryColor}
           selectedID={selectedID}
           onFlipCard={flipCard}
           image={foodGiveaway1}
           alt="Meal center giveaway in action"
+        />
+        <ReadingAndMusic
+        color='dark'
+        primaryColor={primaryColor}
+          selectedID={selectedID}
+          onFlipCard={flipCard}
+          image="https://st.hzcdn.com/simgs/pictures/kids-rooms/music-room-shop-skout-img~ed014cf70e337370_4-3443-1-b869104.jpg"
+          alt="Reading and music room"
         />
       </ErrorBoundary>
     </div>

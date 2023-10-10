@@ -12,9 +12,7 @@
   position: absolute;
   width: 27px;
   height: 27px;
-
-  background: linear-gradient(90deg, rgb(205, 46, 147), rgb(210, 62, 213));
-
+  background: linear-gradient(90deg, #ff166a, #fc74a5);
   border-radius: 50px;
   left: -1px;
   top: -1px;

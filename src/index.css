@@ -10,7 +10,10 @@ html {
 
 body {
   /* background-color: rgb(51, 51, 51); */
-  background-color: whitesmoke;
+  /* background-color: whitesmoke; */
+  background: linear-gradient(90deg, #ff166a, #fc74a5);
+
+  overflow-x: hidden;
 }
 
 button {

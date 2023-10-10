@@ -1,0 +1,14 @@
+#reading-n-music {
+  position: relative;
+  background: linear-gradient(90deg, #ff166a, #fc74a5);
+  height: 100vh;
+  width: 100vw;
+  padding: 5rem;
+}
+
+#wave2 {
+    transform: scale(1.5) rotate(180deg);
+    position: absolute;
+    top: 0;
+
+}

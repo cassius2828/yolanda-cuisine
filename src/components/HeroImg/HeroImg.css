@@ -1,17 +1,70 @@
 .hero-img-container {
   margin-top: 6rem;
   width: 100%;
+  height: 100vh;
   max-height: 70rem;
   position: relative;
+  /* border: solid; */
+
 }
 
-.hero-img-container img {
-  width: 100%;
-  height: 100%;
-  max-height: 50rem;
+.mission-statement-container {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  border: solid;
+height: 50%;
 }
 
-.hero-transition-cover {
+.mission-statement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid;
+  margin: 0 1rem;
+  padding: 1rem;
+}
+.mission-statement h1, .mission-statement span {
+  color: whitesmoke
+}
+
+.mission-statement h1 {
+  font-size: 3rem;
+}
+
+.mission-statement span {
+  font-size: 1.25rem;
+}
+
+
+
+.circle-container {
+  border: solid 5px #fc74a5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: whitesmoke;
+  /* background: linear-gradient(90deg, #ff166a, #fc74a5); */
+
+ 
+  position: relative;
+  top: 3rem;
+  left: 3rem;
+}
+
+#hero-img {
+  width: 95%;
+  height: 95%;
+object-fit: cover;
+border-radius: 50%;
+
+
+}
+/* .hero-transition-cover {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,10 +80,10 @@
 }
 .hero-transition-cover * {
   font-size: 3rem;
-}
+} */
 
-.hero-transition-cover:hover {
+/* .hero-transition-cover:hover {
   opacity: 0.5;
   transition: all 0.2s ease-in-out;
-}
+} */
 

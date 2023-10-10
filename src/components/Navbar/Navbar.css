@@ -6,7 +6,7 @@
   justify-content: space-between;
   /* eventually move to sass and create nav height var */
   height: 6rem;
-  background: linear-gradient(90deg, rgb(205, 46, 147), rgb(210, 62, 213));
+  background: linear-gradient(90deg, #ff166a, #fc74a5);
 
   color: whitesmoke;
   z-index: 2;
@@ -80,7 +80,8 @@
   height: 50vh;
   min-height: 50rem;
   margin-top: 6rem;
-  background: linear-gradient(90deg, rgb(205, 46, 147), rgb(210, 62, 213));
+   background: linear-gradient(90deg, #ff166a, #fc74a5);
+
   opacity: 0.9;
   position: absolute;
   left: -300rem;

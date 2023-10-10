@@ -2,7 +2,8 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import "./Navbar.css";
-import { MobileListBtn } from "./MobileListBtn";
+import { DesktopNav } from "./DesktopNav";
+import { MobileNav } from "./MobileNav";
 
 const navList = [
   "Homeless Support",
@@ -27,66 +28,7 @@ export const Navbar = ({ burger, onToggleMenu }) => {
   );
 };
 
-// eslint-disable-next-line react/prop-types
-export const DesktopNav = ({ navList }) => {
-  return (
-    <div className="desktop-nav">
-      {" "}
-      <h1>Yolanda's Cuisine & Tasty Treats</h1>
-      <ul>
-        {/*eslint-disable-next-line react/prop-types*/}
-        {navList.map((i, index) => {
-          return (
-            <a key={index} href={i.split("").join("").toLowerCase()}>
-              <li id={i.split("").join("").toLowerCase()}>{i}</li>
-            </a>
-          );
-        })}
-      </ul>
-    </div>
-  );
-};
 
-// eslint-disable-next-line react/prop-types
-export const MobileNav = ({ navList, burger, handleToggleMenu }) => {
-  //   const [burger, setBurger] = useState(false);
-
-  return (
-    <>
-      {" "}
-      <div className="mobile-nav">
-        <h1>Yolanda's Cuisine & Tasty Treats</h1>
-        <div
-          onClick={handleToggleMenu}
-          className={
-            burger ? "hamburger-container active" : "hamburger-container"
-          }
-        ></div>
-      </div>
-      <div className={burger ? "slide-menu slide-in" : "slide-menu"}>
-        <ul>
-          {/*eslint-disable-next-line react/prop-types*/}
-          {navList.map((i, index) => {
-            return <MobileNavListItem key={i} listText={i} />;
-          })}
-        </ul>
-      </div>
-    </>
-  );
-};
-
-export const MobileNavListItem = ({ listText }) => {
-  return (
-    <div className="list-item-container">
-      {" "}
-      <a href="">
-        <li>
-          <MobileListBtn text={listText} />
-        </li>
-      </a>
-    </div>
-  );
-};
 /*
 List Item Design
 - border gradient
