@@ -1,10 +1,11 @@
 /* TitleUnderline */
+@use "../abstracts/" as *;
 
 .first-hr,
 .second-hr {
   position: absolute;
   border: none;
-  background-color: #ff166a;
+  background-color: $color-primary;
 }
 
 .hr-container {
@@ -12,6 +13,7 @@
   display: flex;
   justify-content: center;
   margin: 1rem;
+  width: 100%;
 }
 
 .first-hr {
@@ -28,22 +30,31 @@
 
 /* ICONS */
 
+  .descriptive-icon:first-child {
+    color: $color-primary;
+  }
+
+  .descriptive-icon {
+    color: $color-secondary;
+  }
+
+
 /* EXPAND BTN */
 
 .expand-btn {
   width: 20%;
   height: 20px;
-  color: #ff166a;
+  color: $color-primary;
   background-color: transparent;
   border-radius: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid 1px #ff166a;
+  border: solid 1px $color-primary;
 }
 
 .fill-color {
-  background: linear-gradient(90deg, #ff166a, #fc74a5);
+  background: $gradient;
   width: 1%;
   height: 1%;
   transition: 0.25s all ease-in-out;
@@ -53,7 +64,7 @@
 }
 
 .white-color {
-   background: linear-gradient(90deg, #fff, #fff);
+  background: linear-gradient(90deg, $color-white, $color-white);
   width: 1%;
   height: 1%;
   transition: 0.25s all ease-in-out;
@@ -79,3 +90,29 @@
   height: 100%;
   transition: 0.25s all ease-in-out;
 }
+
+/* date hr bracket */
+
+.date-hr-bracket {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.75rem;
+}
+
+.date-hr-bracket hr {
+  height: 1px;
+  width: 200%;
+  min-width: 100px;
+  border: none;
+  margin: 0.25rem 0;
+}
+
+.light-hr {
+  background-color: $color-primary;
+}
+
+.dark-hr {
+  background-color: $color-whitesmoke;
+}
+

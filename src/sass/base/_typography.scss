@@ -1,0 +1,132 @@
+@use "../abstracts/" as *;
+
+// ! TITLES
+
+// main heading
+
+// secondary heading
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+
+  &--light {
+    color: $color-white;
+  }
+  &--gradient {
+    background: $gradient;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
+
+// third heading
+
+// paragraph
+
+// ! COMPONENTS
+
+// error modal
+
+// flip cards
+.dates {
+  font-size: 1.5rem;
+}
+
+.description-container p {
+  font-size: 16px;
+  padding: 1rem;
+}
+// hero img
+
+.mission-statement {
+  @include flexboxColAlignCenter;
+  border: solid;
+  margin: 0 1rem;
+  padding: 1rem;
+
+ 
+  h1 {
+    @extend %mission-statement-text-color;
+      font-size: 3rem;
+  }
+  span {
+    @extend %mission-statement-text-color;
+      font-size: 1.25rem;
+  }
+}
+
+// mobile list
+
+// navbar
+
+// reusables
+.light-text {
+  color: $color-primary;
+}
+
+.dark-text {
+  color: $color-whitesmoke;
+}
+
+// ! SECTIONS
+
+// arts and crafts
+
+// dedications
+.color-container span {
+  font-size: 3rem;
+  font-family: "Niconne", cursive;
+  font-weight: 700;
+  color: $color-primary;
+  text-shadow: 2px 2px 0px $color-white, 4px 4px 0px $color-secondary;
+  line-height: 3rem;
+  width: 100%;
+  background-color: rgba(240, 248, 255, 0.717);
+  padding: 1rem;
+  opacity: 1;
+  z-index: 4;
+  bottom: 10%;
+  transition: 0.3s ease-in-out;
+}
+
+// food display
+
+.food-item-card-container {
+  color: $color-primary;
+
+  p {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
+
+.order-btn {
+  font-size: 2rem;
+  text-decoration: none;
+  color: $color-whitesmoke;
+}
+
+// footer
+
+// homeless support
+
+// reading and music
+.reading-n-music-section-details {
+  width: 70vw;
+  padding: 1rem;
+  font-size: 1.125rem;
+}
+// tribute
+
+.tribute-container--title {
+      display: flex;
+    padding: 1.5rem;
+}
+
+.tribute-title {
+  font-size: 3rem;
+  color: whitesmoke;
+  padding: 1rem;
+  text-align: center;
+}

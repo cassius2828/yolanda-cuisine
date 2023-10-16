@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
 
-import "./Navbar.css";
+
 import { DesktopNav } from "./DesktopNav";
 import { MobileNav } from "./MobileNav";
 

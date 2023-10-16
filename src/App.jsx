@@ -1,15 +1,26 @@
-import "./App.css";
+// import "./App.css";
 import ErrorBoundary from "./ErrorBoundary";
 import { Navbar } from "./components/Navbar/Navbar";
 import { HeroImg } from "./components/HeroImg/HeroImg";
 
 // homeless support imports
 import { HomelessSupport } from "./components/HomelessSupport/HomelessSupport";
-
 import foodGiveaway1 from "./assets/images/charity/homeless-food-distribution.jpg";
 
 import { useState } from "react";
+// import {ReadingAndMusic} from "./components/ReadingAndMusic/ReadingAndMusic";
+import {ArtsAndCrafts} from "./components/ArtsAndCrafts/ArtsAndCrafts";
+// reading and music imports
 import {ReadingAndMusic} from "./components/ReadingAndMusic/ReadingAndMusic";
+import musicRoom from './assets/images/misc/music-room.jpeg'
+import {FoodDisplay} from "./components/FoodDisplay/FoodDisplay";
+import {Dedications} from "./components/Dedications/Dedications";
+import {Tribute} from "./components/Tribute/Tribute";
+import {Footer} from "./components/Footer/Footer";
+
+
+
+
 function App() {
   const [burger, setBurger] = useState(false);
   const [selectedID, setSelectedID] = useState(null);
@@ -37,22 +48,35 @@ function App() {
       >
         <Navbar burger={burger} onToggleMenu={toggleMenu} />
         <HeroImg burger={burger} setBurger={setBurger} />
-        <HomelessSupport
-        color='light'
+        <FoodDisplay
         primaryColor={primaryColor}
+        />
+        <HomelessSupport
+          color="light"
+          primaryColor={primaryColor}
           selectedID={selectedID}
           onFlipCard={flipCard}
           image={foodGiveaway1}
           alt="Meal center giveaway in action"
         />
-        <ReadingAndMusic
-        color='dark'
-        primaryColor={primaryColor}
+        <ArtsAndCrafts
+          color="dark"
+          primaryColor={primaryColor}
           selectedID={selectedID}
           onFlipCard={flipCard}
-          image="https://st.hzcdn.com/simgs/pictures/kids-rooms/music-room-shop-skout-img~ed014cf70e337370_4-3443-1-b869104.jpg"
+          image="https://www.younghouselove.com/wp-content/uploads//2020/03/Kids-Art-Room-Full-Desk-Long.jpg"
+          alt="Arts and crafts room"
+        />
+        <ReadingAndMusic
+          color="light"
+          primaryColor={primaryColor}
+          selectedID={selectedID}
+          image={musicRoom}
           alt="Reading and music room"
         />
+        <Dedications/>
+        <Tribute/>
+        <Footer/>
       </ErrorBoundary>
     </div>
   );

@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import './MobileListBtn.css';
+
 
 export const MobileListBtn = ({text}) => {
   return (

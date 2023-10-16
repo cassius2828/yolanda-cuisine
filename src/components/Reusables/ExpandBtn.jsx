@@ -4,6 +4,9 @@ import { useState } from "react";
 /*
 The logic here allows me to pass in a color value as a prop to determine the color
 scheme of the component so it matches well with eithe white space or colored space
+
+* I may refactor this code by using only classes and the color prop to improve readability,
+* instead of using so many inline style props which causes unpredictable behaviors and messy code
 */
 
 export const ExpandBtn = ({ text, color, primaryColor }) => {

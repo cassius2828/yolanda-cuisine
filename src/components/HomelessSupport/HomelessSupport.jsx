@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { FlipCard } from "../FlipCards/FlipCard";
-import { DescriptiveIcon, TitleUnderline } from "../Reusables/TitleUnderline";
-import "./HomelessSupport.css";
+import { TitleUnderline } from "../Reusables/TitleUnderline";
+import { DescriptiveIcon } from "../Reusables/DescriptiveIcon";
 import {faBowlFood, faShirt} from "@fortawesome/free-solid-svg-icons";
 
 export const HomelessSupport = ({ image, alt, onFlipCard, selectedID, primaryColor, secondaryColor, color }) => {
@@ -16,15 +16,17 @@ export const HomelessSupport = ({ image, alt, onFlipCard, selectedID, primaryCol
         ></path>
       </svg>
       <div className="hs-icon-container">
-        <DescriptiveIcon color={primaryColor} iconName={faBowlFood} />
-        <DescriptiveIcon color={primaryColor} iconName={faShirt} />
+        <DescriptiveIcon iconName={faBowlFood} />
+        <DescriptiveIcon iconName={faShirt} />
       </div>
-      <h2 className=" mb4 section-title">Meal Center & Clothing Giveaways</h2>
+      <h2 className=" mb4 section-title section-title--gradient">
+        Meal Center & Clothing Giveaways
+      </h2>
       <TitleUnderline />
       <FlipCard
-      primaryColor={primaryColor}
-      color={color}
-      expandBtnText='Join'
+        primaryColor={primaryColor}
+        color={color}
+        expandBtnText="Join"
         id="homeless-support"
         selectedID={selectedID}
         handleFlipCard={onFlipCard}

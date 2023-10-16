@@ -1,0 +1,7 @@
+@mixin baseAnimationSpeed {
+transition: 0.3s ease-in-out;
+}
+
+@mixin customAnimationSpeed {
+transition: 0.3s cubic-bezier(1, 0, 0.8, 1);
+}

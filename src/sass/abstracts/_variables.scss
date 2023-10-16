@@ -1,0 +1,27 @@
+// @import url("https://fonts.googleapis.com/css?family=Great+Vibes");
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script");
+
+// COLORS
+$color-primary: #ff166a;
+$color-secondary: #fc74a5;
+// $color-primary-blend: #ff1687;
+// $color-secondary-blend: #f7668f;
+$color-black: #000;
+$color-white: #fff;
+$color-whitesmoke: whitesmoke;
+
+// GRADIENT
+$gradient: linear-gradient(90deg, $color-primary, $color-secondary);
+// $blended-gradient: linear-gradient(90deg, $color-primary-blend, $color-secondary-blend);
+
+// FONTS + FONTSIZES
+$font-title: Dancing Script;
+$font-title-size-mobile: 5vw;
+$font-title-size-desktop: 2.5vw;
+// $font-title: Great Vibes;
+$font-descriptions: sans;
+$font-dedications: sans;
+$font-paragraphs: sans;
+
+
+// WIDTH + HEIGHT

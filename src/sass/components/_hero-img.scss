@@ -1,3 +1,6 @@
+@use '../abstracts/' as *;
+
+
 .hero-img-container {
   margin-top: 6rem;
   width: 100%;
@@ -5,7 +8,6 @@
   max-height: 70rem;
   position: relative;
   /* border: solid; */
-
 }
 
 .mission-statement-container {
@@ -14,33 +16,12 @@
   align-items: end;
   justify-content: center;
   border: solid;
-height: 50%;
+  height: 50%;
 }
-
-.mission-statement {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: solid;
-  margin: 0 1rem;
-  padding: 1rem;
-}
-.mission-statement h1, .mission-statement span {
-  color: whitesmoke
-}
-
-.mission-statement h1 {
-  font-size: 3rem;
-}
-
-.mission-statement span {
-  font-size: 1.25rem;
-}
-
 
 
 .circle-container {
-  border: solid 5px #fc74a5;
+  border: solid 5px $color-secondary;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,9 +29,7 @@ height: 50%;
   height: 250px;
   border-radius: 50%;
   background-color: whitesmoke;
-  /* background: linear-gradient(90deg, #ff166a, #fc74a5); */
 
- 
   position: relative;
   top: 3rem;
   left: 3rem;
@@ -59,10 +38,8 @@ height: 50%;
 #hero-img {
   width: 95%;
   height: 95%;
-object-fit: cover;
-border-radius: 50%;
-
-
+  object-fit: cover;
+  border-radius: 50%;
 }
 /* .hero-transition-cover {
   display: flex;
@@ -87,3 +64,14 @@ border-radius: 50%;
   transition: all 0.2s ease-in-out;
 } */
 
+/* Back tro Top Button */
+
+#back-to-top {
+  position: fixed;
+  top: 90%;
+  left: 92.5%;
+  border: solid 3px $color-white;
+  border-radius: 50%;
+  z-index: 99;
+  background-color: $color-white;
+}

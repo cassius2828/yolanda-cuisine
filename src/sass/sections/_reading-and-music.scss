@@ -1,0 +1,40 @@
+@use '../abstracts/' as *;
+
+
+#reading-n-music {
+  background-color: $color-white;
+  /* height: 100vh; */
+  width: 100vw;
+  position: relative;
+}
+
+#wave3 {
+  position: absolute;
+  top: 0;
+  transform: translateY(-99.5%);
+}
+
+#wave4 {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(99.5%);
+}
+
+.reading-n-music-sections {
+  /* width: 70vw; */
+  background-color: $color-white;
+
+@include flexboxColAlignCenter;
+justify-content: center;
+}
+
+.section-img-container {
+  width: 70vw;
+  img {
+      width: 100%;
+  border-radius: 4px;
+  }
+}
+
+
+

@@ -1,0 +1,15 @@
+@use "../abstracts/" as *;
+
+#arts-n-crafts {
+  position: relative;
+  background: $gradient;
+  height: 100vh;
+  width: 100vw;
+  padding: 5rem;
+}
+
+#wave2 {
+  transform: scale(1.5) rotate(180deg);
+  position: absolute;
+  top: 0;
+}

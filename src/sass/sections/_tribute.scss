@@ -1,0 +1,13 @@
+@use "../abstracts/" as *;
+
+.tribute-container {
+  width: 100vw;
+  @include flexboxColAlignCenter;
+
+
+}
+
+.tribute-img-container {
+  width: 70%;
+  border: solid 3px #fff;
+}

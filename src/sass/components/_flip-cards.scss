@@ -1,14 +1,14 @@
+@use "../abstracts/" as *;
+
 .flip-card {
   background-color: transparent;
-
   min-height: 200px;
   perspective: 1000px;
 }
 
 .flip-card-inner {
   position: relative;
-  width: 100%;
-  height: 100%;
+  @include fullWidthAndHeight;
   /* find out what this does and why */
   transition: transform 0.6s;
   transform-style: preserve-3d;
@@ -27,59 +27,63 @@
   /* height: 100%; */
   top: 0;
   position: absolute;
-  display: flex;
-  flex-direction: column;
+  @include flexboxColAlignCenter;
   justify-content: center;
-  align-items: center;
   /* find out what this does and why */
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  border-radius: 4px;
 }
 
 .front-card {
   height: auto;
 }
 
-/* .front-card img {
-object-fit: cover;
-} */
+.front-card img {
+  border-radius: 4px;
+}
 
-/* idk I had to do this to position it right */
-/* .front-card img {
-   margin-top: 20rem;
-} */
+.shadow-text-container {
+  background-color: $color-black;
+  color: $color-white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  transition: 0.3s all ease-out;
+}
+
+.shadow-text-container:hover {
+  opacity: 0.5;
+  transition: 0.3s all ease-out;
+}
 
 .back-card {
   top: 0;
   text-align: center;
   background-color: transparent;
   transform: rotateY(180deg);
-  color: black;
+  color: $color-black;
   padding: 0.5rem;
 }
 
 .description-container {
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
+  @include flexboxColAlignCenter;
 
-.description-container p {
-  font-size: 16px;
-  padding: 1rem;
+  justify-content: space-around;
 }
 
 .description-container hr {
   width: 50%;
   height: 0.1px;
-  background-color: #ff166a;
+  background-color: $color-primary;
 }
 
-.dates {
-  font-size: 1.5rem;
-}
 /* ///////////////////////////// */
 /* ! MEDIA QUERIES TABLET UP */
 /* ///////////////////////////// */
@@ -92,5 +96,9 @@ messing up the order of flips */
   }
   .flip .flip-card-inner {
     transform: none;
+  }
+
+  .shadow-text-container {
+    display: none;
   }
 }

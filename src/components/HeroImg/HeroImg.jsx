@@ -1,7 +1,9 @@
-import "./HeroImg.css";
+
 import heroImg from "../../assets/images/people/gma_hero_img.jpeg";
 import heroImg2 from "../../assets/images/people/gma_hero_img.png";
 import backgroundPink from "../../assets/images/misc/pink-background.jpeg";
+import {DescriptiveIcon} from "../Reusables/DescriptiveIcon";
+import {faCircleChevronUp} from "@fortawesome/free-solid-svg-icons";
 
 // eslint-disable-next-line react/prop-types
 export const HeroImg = ({ burger }) => {
@@ -9,7 +11,10 @@ export const HeroImg = ({ burger }) => {
 
   return (
     <>
-      <div className="hero-img-container ">
+      <div id="top" className="hero-img-container ">
+        <a id="back-to-top" href="#top">
+          <DescriptiveIcon iconName={faCircleChevronUp} color="#ff166bb1" />
+        </a>
         {/* <img
           style={{ position: "absolute", zIndex: "0" }}
           src={backgroundPink}

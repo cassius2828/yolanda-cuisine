@@ -1,3 +1,6 @@
+@use '../abstracts/' as *;
+
+
 .navbar {
   width: 100%;
   position: fixed;
@@ -6,7 +9,7 @@
   justify-content: space-between;
   /* eventually move to sass and create nav height var */
   height: 6rem;
-  background: linear-gradient(90deg, #ff166a, #fc74a5);
+  background: $gradient;
 
   color: whitesmoke;
   z-index: 2;
@@ -28,6 +31,8 @@
 .mobile-nav h1 {
   margin: 2rem 4rem;
   z-index: 2;
+  font-family: $font-title;
+  font-size: $font-title-size-mobile;
 }
 
 /* HAMBURGER SECTION */
@@ -36,10 +41,8 @@
   width: 50px;
   height: 50px;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+ @include flexboxColAlignCenter;
+justify-content: center;
   cursor: pointer;
   z-index: 2;
 }
@@ -51,7 +54,7 @@
   position: absolute;
   width: 25px;
   height: 2px;
-  background-color: whitesmoke;
+  background-color: $color-whitesmoke;
   transition: 0.2s all ease-out;
 }
 
@@ -66,12 +69,12 @@
 
 /* after */
 .hamburger-container::after {
-  box-shadow: 0 10px 0 whitesmoke;
+  box-shadow: 0 10px 0 $color-whitesmoke;
 }
 
 .hamburger-container.active::after {
   transform: rotate(-45deg) translateY(0px);
-  box-shadow: 0 0px 0 whitesmoke;
+  box-shadow: 0 0px 0 $color-whitesmoke;
 }
 
 /* SLIDE MENU */
@@ -80,7 +83,7 @@
   height: 50vh;
   min-height: 50rem;
   margin-top: 6rem;
-   background: linear-gradient(90deg, #ff166a, #fc74a5);
+  background: $gradient;
 
   opacity: 0.9;
   position: absolute;
@@ -99,9 +102,8 @@
 }
 
 .slide-menu ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+ @include flexboxColAlignCenter;
+
   list-style: none;
 }
 
@@ -137,10 +139,12 @@
   }
   .desktop-nav h1 {
     margin: 2rem 4rem;
+  font-family: $font-title;
+    font-size: $font-title-size-desktop;
   }
 
   .desktop-nav a {
-    color: whitesmoke;
+    color: $color-whitesmoke;
     text-decoration: none;
   }
 

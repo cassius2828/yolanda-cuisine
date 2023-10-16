@@ -2,7 +2,7 @@
 // import foodGiveaway1 from '../../assets/images/charity/homeless-food-distrubution.jpg'
 
 import {ExpandBtn} from '../Reusables/ExpandBtn';
-import './FlipCard.css';
+
 
 
 export const FlipCard = ({ image, alt, id, selectedID, handleFlipCard, expandBtnText, color, primaryColor }) => {
@@ -15,6 +15,7 @@ export const FlipCard = ({ image, alt, id, selectedID, handleFlipCard, expandBtn
     >
       <div className="flip-card-inner">
         <div className="front-card">
+          <div className='shadow-text-container'>Click For Details</div>
           <img src={image} alt={alt} />
         </div>
         <div style={{border: color === 'light' ? `solid ${primaryColor} 1.5px` : 'solid #fff 1.5px'}} className="back-card">
